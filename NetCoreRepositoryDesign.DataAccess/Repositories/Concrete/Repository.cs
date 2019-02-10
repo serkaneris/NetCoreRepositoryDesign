@@ -9,8 +9,7 @@ using System.Text;
 
 namespace NetCoreRepositoryDesign.DataAccess.Repositories.Concrete
 {
-    public class Repository<TEntity> : IRepository<TEntity> 
-        where TEntity : class, IEntity, new()
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity, new()
     {
         protected DbContext _context;
         private DbSet<TEntity> _dbSet;
