@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NetCoreRepositoryDesign.Business.Abstract;
+using NetCoreRepositoryDesign.Business.Concrete;
 using NetCoreRepositoryDesign.DataAccess;
 using NetCoreRepositoryDesign.DataAccess.Repositories.Abstract;
 using NetCoreRepositoryDesign.DataAccess.Repositories.Concrete;
@@ -36,6 +38,7 @@ namespace NetCoreRepositoryDesign.WebApi
             //services.AddScoped<IPersonnelRepository, PersonnelRepository>();
             //services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPersonnelService, PersonnelService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

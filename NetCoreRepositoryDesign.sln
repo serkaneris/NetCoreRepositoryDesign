@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreRepositoryDesign.Entities", "NetCoreRepositoryDesign.Entities\NetCoreRepositoryDesign.Entities.csproj", "{E3FC43B3-227A-4972-BAEA-D374132A5142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreRepositoryDesign.Entities", "NetCoreRepositoryDesign.Entities\NetCoreRepositoryDesign.Entities.csproj", "{E3FC43B3-227A-4972-BAEA-D374132A5142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreRepositoryDesign.DataAccess", "NetCoreRepositoryDesign.DataAccess\NetCoreRepositoryDesign.DataAccess.csproj", "{8EB6AB27-81A4-4AB5-A158-9809D3E87616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreRepositoryDesign.DataAccess", "NetCoreRepositoryDesign.DataAccess\NetCoreRepositoryDesign.DataAccess.csproj", "{8EB6AB27-81A4-4AB5-A158-9809D3E87616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreRepositoryDesign.WebApi", "NetCoreRepositoryDesign.WebApi\NetCoreRepositoryDesign.WebApi.csproj", "{96505D0B-5983-4ABD-B392-3AAFFDCB511D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreRepositoryDesign.WebApi", "NetCoreRepositoryDesign.WebApi\NetCoreRepositoryDesign.WebApi.csproj", "{96505D0B-5983-4ABD-B392-3AAFFDCB511D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreRepositoryDesign.Business", "NetCoreRepositoryDesign.Business\NetCoreRepositoryDesign.Business.csproj", "{2B556533-F52C-4353-A714-64CA7F5DD9D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{96505D0B-5983-4ABD-B392-3AAFFDCB511D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96505D0B-5983-4ABD-B392-3AAFFDCB511D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96505D0B-5983-4ABD-B392-3AAFFDCB511D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B556533-F52C-4353-A714-64CA7F5DD9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B556533-F52C-4353-A714-64CA7F5DD9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B556533-F52C-4353-A714-64CA7F5DD9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B556533-F52C-4353-A714-64CA7F5DD9D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,6 +14,10 @@ namespace NetCoreRepositoryDesign.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        /*
+         * This Controller directly communicate with DataAccess Layer and UnitOfWork without Business layer.
+         */
+
         private IUnitOfWork _unitOfWork;
         public ValuesController(NcrdContext context)
         {
