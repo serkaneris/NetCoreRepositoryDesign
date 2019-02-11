@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using NetCoreRepositoryDesign.DataAccess;
 
 namespace NetCoreRepositoryDesign.WebApi.Controllers
 {
@@ -10,11 +14,26 @@ namespace NetCoreRepositoryDesign.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private IUnitOfWork _unitOfWork;
+        public ValuesController(NcrdContext context)
+        {
+            _unitOfWork = new UnitOfWork(context);
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            //Test01 Get all with out filter
+            //var lst = _unitOfWork.PersonnelRepository.GetAll();
+
+            //Test02 Get all with filter
+            //var lst = _unitOfWork.PersonnelRepository.GetAll(x => x.Id > 4);
+
+            //Test03 Get with join
+            //var lst = _unitOfWork.PersonnelRepository.GetPersonnelsWithDepartment();
+            var lst = _unitOfWork.DepartmentRepository.GetDepartmentsWithPersonnels();
+            return null;
         }
 
         // GET api/values/5

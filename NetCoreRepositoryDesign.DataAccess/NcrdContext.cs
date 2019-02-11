@@ -18,12 +18,14 @@ namespace NetCoreRepositoryDesign.DataAccess
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    //Todo: Connection string static alinabilir!
-        //    optionsBuilder.UseSqlServer("Server=DESKTOP-U3CMHH9\\SQLEXPRESS;Database=NcrdDb;Trusted_Connection=True;");
+        //    //string connectionStr = "Server=DESKTOP-U3CMHH9\\SQLEXPRESS;Database=NcrdDb;Trusted_Connection=True;";
+        //    string connectionStr = "Server=SERKANERIS\\SQLEXPRESS;Database=NcrdDb;Trusted_Connection=True;";
+        //    optionsBuilder.UseSqlServer(connectionStr);
         //}
 
 
 
-        public DbSet<Departmant> Departmants { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public DbSet<Personnel> Personnels { get; set; }
     }
 }

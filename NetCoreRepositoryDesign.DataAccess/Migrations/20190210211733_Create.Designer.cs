@@ -21,7 +21,7 @@ namespace NetCoreRepositoryDesign.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NetCoreRepositoryDesign.Entities.Concrete.Departmant", b =>
+            modelBuilder.Entity("NetCoreRepositoryDesign.Entities.Concrete.Department", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace NetCoreRepositoryDesign.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departmants");
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("NetCoreRepositoryDesign.Entities.Concrete.Personnel", b =>
@@ -52,7 +52,7 @@ namespace NetCoreRepositoryDesign.DataAccess.Migrations
 
                     b.Property<DateTime?>("DeletedAt");
 
-                    b.Property<int>("DepartmantId");
+                    b.Property<int>("DepartmentId");
 
                     b.Property<string>("FirstName");
 
@@ -64,16 +64,16 @@ namespace NetCoreRepositoryDesign.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmantId");
+                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Personnels");
                 });
 
             modelBuilder.Entity("NetCoreRepositoryDesign.Entities.Concrete.Personnel", b =>
                 {
-                    b.HasOne("NetCoreRepositoryDesign.Entities.Concrete.Departmant", "Departmant")
+                    b.HasOne("NetCoreRepositoryDesign.Entities.Concrete.Department", "Department")
                         .WithMany("Personnels")
-                        .HasForeignKey("DepartmantId")
+                        .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -21,7 +21,7 @@ namespace NetCoreRepositoryDesign.DataAccess.Repositories.Concrete
 
         public void Add(TEntity entity)
         {
-          //_context.Departmants
+          //_context.Departments
             _dbSet.Add(entity);
         }
 
@@ -38,7 +38,7 @@ namespace NetCoreRepositoryDesign.DataAccess.Repositories.Concrete
         public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
             return filter == null ? _dbSet.ToList() :
-                _dbSet.Where(filter).ToList();
+            _dbSet.Where(filter).ToList();
         }
 
         public void Remove(TEntity entity)

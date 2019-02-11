@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NetCoreRepositoryDesign.DataAccess;
+using NetCoreRepositoryDesign.DataAccess.Repositories.Abstract;
+using NetCoreRepositoryDesign.DataAccess.Repositories.Concrete;
 
 namespace NetCoreRepositoryDesign.WebApi
 {
@@ -27,8 +29,13 @@ namespace NetCoreRepositoryDesign.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("NcrdDbConnection");
+            var connectionString = Configuration.GetConnectionString("NcrdDbConnectionManas");
             services.AddDbContext<NcrdContext>(options => options.UseSqlServer(connectionString));
+
+            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            //services.AddScoped<IPersonnelRepository, PersonnelRepository>();
+            //services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

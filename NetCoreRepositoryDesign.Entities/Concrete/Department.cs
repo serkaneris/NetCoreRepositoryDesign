@@ -5,9 +5,9 @@ using System.Text;
 
 namespace NetCoreRepositoryDesign.Entities.Concrete
 {
-    public class Departmant:BaseEntity,IEntity
+    public class Department:BaseEntity,IEntity
     {
-        public Departmant()
+        public Department()
         {
             Personnels = new List<Personnel>();
         }

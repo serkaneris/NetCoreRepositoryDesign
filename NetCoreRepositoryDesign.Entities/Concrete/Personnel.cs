@@ -9,13 +9,13 @@ namespace NetCoreRepositoryDesign.Entities.Concrete
     {
         public Personnel()
         {
-            Departmant = new Departmant();
+            Department = new Department();
         }
 
         //public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int DepartmantId { get; set; }
-        public Departmant Departmant { get; set; }
+        public int DepartmentId { get; set; }
+        public Department Department { get; set; }
     }
 }
